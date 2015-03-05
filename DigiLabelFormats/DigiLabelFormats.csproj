@@ -265,12 +265,6 @@
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_BcUdSlTrTvCf\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_BcUdSlTvCf\kg.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_BcUdSlTvCf\stk.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_UdSlTvCf\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -634,13 +634,14 @@ namespace DigiLabelFormats
 
 
                     }
+                }
 
 
                     readfile.Close();
                     RefreshRestFormaten();
                     RefreshLabelFormats();
 
-                }
+                
             }
 
         }
@@ -726,7 +727,7 @@ namespace DigiLabelFormats
 
                         // string startfile = @ServerDrive + @lstTheme.SelectedItem.ToString() + @"\" + @lstMain.SelectedItem.ToString() + @"\" + @lstDevices.SelectedItem.ToString() + @"\" + @lstSizes.SelectedItem.ToString() + @"\" + @lstLabelFormats.SelectedItem.ToString() + @"\freeformats.dat";
                         File.Copy(Folders.StartDatServer, Folders.StartDat, true);
-
+                        Process.Start(Folders.DigiDriver);
                     }
 
 

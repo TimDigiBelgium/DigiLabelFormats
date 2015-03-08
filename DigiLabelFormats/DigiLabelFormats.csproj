@@ -178,6 +178,12 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdTr\error.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTt\error.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTv\error.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_PdSmOpCwTvTt\error.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -310,6 +316,7 @@
     <Content Include="LblFrmts\Salesmen\Carl Onghena\Sm5500\Registratie\60x73\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LOG.txt" />
     <EmbeddedResource Include="frmCustomerLabels.resx">
       <DependentUpon>frmCustomerLabels.cs</DependentUpon>
     </EmbeddedResource>
@@ -710,7 +717,7 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTfTt\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTt\freeformats.dat">
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTtI0\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTvTtI0\kg.png">
@@ -719,7 +726,7 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTvTtI0\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTv\freeformats.dat">
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTvI0\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTvTtBi\kg.png">
@@ -1728,6 +1735,9 @@
     <None Include="LblFrmts\Salesmen\Carl Onghena\Sm5500\Registratie\60x73\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Manual\MANUAL DIGILABELFORMATS 2015.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -2459,16 +2469,16 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTfTt\stk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTt\kg.png">
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTtI0\kg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTt\stk.png">
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTfTtI0\stk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTv\kg.png">
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTvI0\kg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTv\stk.png">
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTrTvI0\stk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdUdTvTt\kg.png">

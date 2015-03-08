@@ -1,0 +1,3 @@
+﻿labels die moeten nagekeken worden :
+Sm5500_60x49_Totaal_BcPdWtQuOp				barcode iets hoger zetten
+Sm5500_60x49_BcSdTr							lotnummer ontbreekt

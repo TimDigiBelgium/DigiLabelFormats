@@ -10,9 +10,13 @@ namespace ClassLibraryLabelFormats
 
         public static string Sm5500FranseTeksten { get; set; }
 
+        public static string Sm5500DuitseTeksten { get; set; }
+
         public static string Sm5100NederlandseTeksten { get; set; }
 
         public static string Sm5100FranseTeksten { get; set; }
+
+        public static string Sm5100DuitseTeksten { get; set; }
 
         public static string StartDat { get; set; }
 

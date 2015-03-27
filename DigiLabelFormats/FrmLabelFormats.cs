@@ -46,12 +46,11 @@ namespace DigiLabelFormats
 
             Folders.Sm5500NederlandseTeksten = Folders.rootMap + @"\DataFiles\Label teksten\Sm5500\NL_Standaard Label Teksten.txt";
             Folders.Sm5500FranseTeksten = Folders.rootMap + @"\DataFiles\Label teksten\Sm5500\FR_Standaard Label Teksten.txt";
-
-
+            Folders.Sm5500DuitseTeksten = Folders.rootMap + @"\DataFiles\Label teksten\Sm5500\DE_Standaard Label Teksten.txt";
+            
             Folders.Sm5100NederlandseTeksten = Folders.rootMap + @"\DataFiles\Label teksten\Sm5100\NL_Standaard Label Teksten.txt";
-
-
             Folders.Sm5100FranseTeksten = Folders.rootMap + @"\DataFiles\Label teksten\Sm5100\FR_Standaard Label Teksten.txt";
+            Folders.Sm5100DuitseTeksten = Folders.rootMap + @"\DataFiles\Label teksten\Sm5100\DE_Standaard Label Teksten.txt";
 
 
 
@@ -83,6 +82,7 @@ namespace DigiLabelFormats
             lstLanguage.Items.Add("No label texts");
             lstLanguage.Items.Add("Nederlands");
             lstLanguage.Items.Add("Français");
+            lstLanguage.Items.Add("Deutsch");
             lstLanguage.SelectedIndex = 1;
         }
 
@@ -388,6 +388,7 @@ namespace DigiLabelFormats
                     string combinedFormats = WriteFormatFile();
                     string nlTexts;
                     string frTexts;
+                    string deTexts;
 
                     saveFormatsDialog.Filter = Resources.FrmLabelFormats_btnSaveFormatFile_Click_dat_bestanden_____dat;
                     saveFormatsDialog.Title = Resources.FrmLabelFormats_btnSaveFormatFile_Click_Bewaar_het_formaatbestand_dat_je_hebt_samengesteld;
@@ -424,6 +425,18 @@ namespace DigiLabelFormats
                                 frTexts = @Folders.Sm5100FranseTeksten;
                             }
                             File.Copy(frTexts, saveFormatsDialog.FileName, true);
+                            File.AppendAllText(saveFormatsDialog.FileName, combinedFormats);
+                            break;
+                        case 3:
+                            if (sm5500labeltexts)
+                            {
+                                deTexts = @Folders.Sm5500DuitseTeksten;
+                            }
+                            else
+                            {
+                                deTexts = @Folders.Sm5100DuitseTeksten;
+                            }
+                            File.Copy(deTexts, saveFormatsDialog.FileName, true);
                             File.AppendAllText(saveFormatsDialog.FileName, combinedFormats);
                             break;
 

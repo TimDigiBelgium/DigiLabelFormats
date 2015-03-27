@@ -181,9 +181,9 @@
             // 
             this.groupBox3.Controls.Add(this.lstLanguage);
             this.groupBox3.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(624, 216);
+            this.groupBox3.Location = new System.Drawing.Point(624, 215);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(160, 73);
+            this.groupBox3.Size = new System.Drawing.Size(160, 88);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Text language";
@@ -194,7 +194,7 @@
             this.lstLanguage.ItemHeight = 14;
             this.lstLanguage.Location = new System.Drawing.Point(10, 21);
             this.lstLanguage.Name = "lstLanguage";
-            this.lstLanguage.Size = new System.Drawing.Size(144, 46);
+            this.lstLanguage.Size = new System.Drawing.Size(144, 60);
             this.lstLanguage.TabIndex = 0;
             // 
             // btnTotalLabel
@@ -336,7 +336,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLabelFormats";
-            this.Text = "DigiLabelFormats by Tim Quirynen - Evaluation version 09-03-15";
+            this.Text = "DigiLabelFormats by Tim Quirynen - Evaluation version 25-03-15";
             this.Load += new System.EventHandler(this.frmLabelFormats_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

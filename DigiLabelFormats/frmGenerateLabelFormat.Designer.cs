@@ -280,7 +280,7 @@
             // chkOperator
             // 
             this.chkOperator.AutoSize = true;
-            this.chkOperator.Location = new System.Drawing.Point(203, 42);
+            this.chkOperator.Location = new System.Drawing.Point(203, 45);
             this.chkOperator.Name = "chkOperator";
             this.chkOperator.Size = new System.Drawing.Size(74, 18);
             this.chkOperator.TabIndex = 24;
@@ -291,7 +291,7 @@
             // chkPluNumber
             // 
             this.chkPluNumber.AutoSize = true;
-            this.chkPluNumber.Location = new System.Drawing.Point(283, 42);
+            this.chkPluNumber.Location = new System.Drawing.Point(283, 45);
             this.chkPluNumber.Name = "chkPluNumber";
             this.chkPluNumber.Size = new System.Drawing.Size(90, 18);
             this.chkPluNumber.TabIndex = 23;

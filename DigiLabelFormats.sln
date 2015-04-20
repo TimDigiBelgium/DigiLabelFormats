@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiLabelFormats", "DigiLabelFormats\DigiLabelFormats.csproj", "{5BDD5402-C8A5-4022-9770-36ED47442EE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLabelFormats", "ClassLibraryLabelFormats\ClassLibraryLabelFormats.csproj", "{3D650656-8648-4B7F-B9FD-BF6BE8302B79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateCombinations", "frmGenerateCombinations\GenerateCombinations.csproj", "{D02DF847-1EA3-42D8-9265-BA02E5632E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigidriverSend", "DigidriverSend\DigidriverSend.csproj", "{9B5E148F-DDA5-4271-961C-1E06345AD79A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D02DF847-1EA3-42D8-9265-BA02E5632E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D02DF847-1EA3-42D8-9265-BA02E5632E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D02DF847-1EA3-42D8-9265-BA02E5632E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

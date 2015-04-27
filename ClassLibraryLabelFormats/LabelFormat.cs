@@ -60,7 +60,14 @@ namespace ClassLibraryLabelFormats
             FormaatCode = formaatCode;
            // DigiDriverText = AssignDigidriverText(formaatCode);
             Omschrijving = MaakOmschrijving(formaatCode);
-            if (!formaatCode.Contains("Linerless"))
+
+            if (formaatCode.Contains("Infotag"))
+            {
+                this.Size = formaatCode.Substring(7, 6).Replace("_", "");
+                // this.Width = Convert.ToInt32(Size.Substring(0, 2));
+                //this.Height = Convert.ToInt32(Size.Substring(3));
+            }
+            else if (!formaatCode.Contains("Linerless"))
             {
                 this.Size = formaatCode.Substring(7, 6).Replace("_", "");
                 this.Width = Convert.ToInt32(Size.Substring(0, 2));
@@ -76,7 +83,13 @@ namespace ClassLibraryLabelFormats
             FormaatCode = formaatCode;
             DigiDriverText = AssignDigidriverText(formaatCode);
             Omschrijving = MaakOmschrijving(formaatCode);
-            if (!formaatCode.Contains("Linerless"))
+            if (formaatCode.Contains("Infotag"))
+            {
+                this.Size = formaatCode.Substring(7, 6).Replace("_", "");
+               // this.Width = Convert.ToInt32(Size.Substring(0, 2));
+                //this.Height = Convert.ToInt32(Size.Substring(3));
+            }
+            else if (!formaatCode.Contains("Linerless"))
             {
                 this.Size = formaatCode.Substring(7, 6).Replace("_", "");
                 this.Width = Convert.ToInt32(Size.Substring(0, 2));
@@ -191,10 +204,13 @@ namespace ClassLibraryLabelFormats
                 }
             else
             {
-
-
-
                 int codeLength = 5;
+                int codesize = 7;
+                int codedevice = 6;
+                int codesizestart = 7;
+
+
+               
 
                 if (formaatCode.Substring(13, 1).Contains("_"))
                 {
@@ -207,8 +223,24 @@ namespace ClassLibraryLabelFormats
                    // linerless = true;
                 }
 
+                if (this.FormaatCode.Substring(0).Contains("Infotag"))
+                {
+                    string part = FormaatCode.Substring(8, FormaatCode.Length - 8);
+                    int split = part.IndexOf("_");
+                    codeLength = split;
+                    codedevice = FormaatCode.IndexOf("_");
+                    codesize = 7;
+                    codesizestart = 8;
+                    //infotag = true;
+                }
+
+
+
+                digiDriverFilePath = @Folders.ServerDrive + @"\" + @FormaatCode.Substring(0, codedevice) + @"\" + @FormaatCode.Substring(codesizestart, codeLength) + @"\" + @FormaatCode + @"\freeformats.dat"; ;
+
+
         
-                digiDriverFilePath = @Folders.ServerDrive + @"\" + @formaatCode.Substring(0, 6) + @"\" + @formaatCode.Substring(7, codeLength) + @"\" + @formaatCode + @"\freeformats.dat";
+                //digiDriverFilePath = @Folders.ServerDrive + @"\" + @formaatCode.Substring(0, 6) + @"\" + @formaatCode.Substring(7, codeLength) + @"\" + @formaatCode + @"\freeformats.dat";
 
 
             }
@@ -382,7 +414,10 @@ namespace ClassLibraryLabelFormats
                     {
                         omschrijving = omschrijving + "Tekstveld : 'Een ontdooid product niet opnieuw invriezen.'" + Environment.NewLine;
                     }
-
+                    if (labelformatCode.Substring(13).Contains("Pr"))
+                    {
+                        omschrijving = omschrijving + "Tekstveld : 'Aanbieding'" + Environment.NewLine;
+                    }
 
 
             }
@@ -420,8 +455,12 @@ namespace ClassLibraryLabelFormats
         private void AssignImages()
         {
             int codeLength = 5;
+            int codesize = 7;
+            int codedevice = 6;
+            int codesizestart = 7;
 
             bool linerless = false;
+            bool infotag = false;
 
             if (this.FormaatCode.Substring(13,1).Contains("_"))
             {
@@ -440,8 +479,20 @@ namespace ClassLibraryLabelFormats
                 linerless = true;
             }
 
+            if (this.FormaatCode.Substring(0).Contains("Infotag"))
+            {
+                string part = FormaatCode.Substring(8, FormaatCode.Length - 8);
+                int split = part.IndexOf("_");
+                codeLength = split;
+                codedevice = FormaatCode.IndexOf("_");
+                codesize = 7;
+                codesizestart = 8;
+                infotag = true;
+            }
 
-            string imageFolder = @Folders.ServerDrive + @"\" + @FormaatCode.Substring(0, 6) + @"\" + @FormaatCode.Substring(7, codeLength) + @"\" + @FormaatCode ;
+
+
+            string imageFolder = @Folders.ServerDrive + @"\" + @FormaatCode.Substring(0, codedevice) + @"\" + @FormaatCode.Substring(codesizestart, codeLength) + @"\" + @FormaatCode ;
 
         
             string strImageKg = imageFolder + @"\" + "kg.png";
@@ -464,23 +515,35 @@ namespace ClassLibraryLabelFormats
             if (File.Exists(strImageKg))
             {
                 var imageKg = Image.FromFile(strImageKg);
+                if (infotag == true)
+                {
+                    //imageWidth = this.Width * 4;
+                    //imageHeight = this.Height * 4;
+                    this.LabelImageKg = imageKg;
 
+                }
+                else
+                { 
                 if (linerless == false)
                 {
                     imageWidth = this.Width * 4;
                     imageHeight = this.Height * 4;
+                    this.LabelImageKg = StaticMethods.ScaleImage(imageKg, imageWidth, imageHeight);
 
                 }
                 else
                 {
                     imageWidth = Convert.ToInt32(60 * 4);
                     imageHeight = Convert.ToInt32(120 * 4); ;
+                    this.LabelImageKg = StaticMethods.ScaleImage(imageKg, imageWidth, imageHeight);
 
                 }
+            }
+               
 
                
 
-                this.LabelImageKg = StaticMethods.ScaleImage(imageKg, imageWidth, imageHeight);
+               
                 this.OK = true;
                 this.ToCreate = false;
                 this.strToCreate = "";

@@ -79,6 +79,7 @@
             this.chkHeating = new System.Windows.Forms.CheckBox();
             this.btnToCreate = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.chkPromo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPieces)).BeginInit();
             this.grpVlees.SuspendLayout();
@@ -380,9 +381,9 @@
             // 
             this.lstAfmetingen.FormattingEnabled = true;
             this.lstAfmetingen.ItemHeight = 14;
-            this.lstAfmetingen.Location = new System.Drawing.Point(20, 19);
+            this.lstAfmetingen.Location = new System.Drawing.Point(6, 19);
             this.lstAfmetingen.Name = "lstAfmetingen";
-            this.lstAfmetingen.Size = new System.Drawing.Size(99, 256);
+            this.lstAfmetingen.Size = new System.Drawing.Size(123, 256);
             this.lstAfmetingen.TabIndex = 0;
             this.lstAfmetingen.SelectedIndexChanged += new System.EventHandler(this.ChangeFormatCode);
             this.lstAfmetingen.DoubleClick += new System.EventHandler(this.btnBrowse_Click);
@@ -448,9 +449,9 @@
             // 
             this.lstTypeToestel.FormattingEnabled = true;
             this.lstTypeToestel.ItemHeight = 14;
-            this.lstTypeToestel.Location = new System.Drawing.Point(20, 21);
+            this.lstTypeToestel.Location = new System.Drawing.Point(6, 21);
             this.lstTypeToestel.Name = "lstTypeToestel";
-            this.lstTypeToestel.Size = new System.Drawing.Size(99, 46);
+            this.lstTypeToestel.Size = new System.Drawing.Size(123, 46);
             this.lstTypeToestel.TabIndex = 0;
             this.lstTypeToestel.SelectedIndexChanged += new System.EventHandler(this.ChangeDevice);
             // 
@@ -585,6 +586,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.chkPromo);
             this.groupBox6.Controls.Add(this.chkFreezing);
             this.groupBox6.Controls.Add(this.chkCooling);
             this.groupBox6.Controls.Add(this.chkNuts);
@@ -601,7 +603,7 @@
             // chkFreezing
             // 
             this.chkFreezing.AutoSize = true;
-            this.chkFreezing.Location = new System.Drawing.Point(13, 94);
+            this.chkFreezing.Location = new System.Drawing.Point(13, 81);
             this.chkFreezing.Name = "chkFreezing";
             this.chkFreezing.Size = new System.Drawing.Size(277, 18);
             this.chkFreezing.TabIndex = 20;
@@ -612,7 +614,7 @@
             // chkCooling
             // 
             this.chkCooling.AutoSize = true;
-            this.chkCooling.Location = new System.Drawing.Point(13, 70);
+            this.chkCooling.Location = new System.Drawing.Point(13, 61);
             this.chkCooling.Name = "chkCooling";
             this.chkCooling.Size = new System.Drawing.Size(150, 18);
             this.chkCooling.TabIndex = 19;
@@ -623,7 +625,7 @@
             // chkNuts
             // 
             this.chkNuts.AutoSize = true;
-            this.chkNuts.Location = new System.Drawing.Point(13, 46);
+            this.chkNuts.Location = new System.Drawing.Point(13, 41);
             this.chkNuts.Name = "chkNuts";
             this.chkNuts.Size = new System.Drawing.Size(316, 18);
             this.chkNuts.TabIndex = 18;
@@ -674,6 +676,17 @@
             this.lblError.Size = new System.Drawing.Size(22, 31);
             this.lblError.TabIndex = 32;
             this.lblError.Text = " ";
+            // 
+            // chkPromo
+            // 
+            this.chkPromo.AutoSize = true;
+            this.chkPromo.Location = new System.Drawing.Point(13, 105);
+            this.chkPromo.Name = "chkPromo";
+            this.chkPromo.Size = new System.Drawing.Size(150, 18);
+            this.chkPromo.TabIndex = 21;
+            this.chkPromo.Text = "\"Aanbieding\" (infotag)";
+            this.chkPromo.UseVisualStyleBackColor = true;
+            this.chkPromo.CheckedChanged += new System.EventHandler(this.ChangeFormatCode);
             // 
             // FrmGenerateLabelFormat
             // 
@@ -781,5 +794,6 @@
         private System.Windows.Forms.CheckBox chkCooling;
         private System.Windows.Forms.Button btnToCreate;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.CheckBox chkPromo;
     }
 }

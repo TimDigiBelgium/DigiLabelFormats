@@ -25,30 +25,39 @@ namespace DigiLabelFormats
             }
         }
 
+        public IEnumerable<string> doelformaten { get; set; }
+
         public bool sm5500LabelTexts
         {
             get;
             private set;
         }
 
+        public void refreshDoelFormaten()
+        {
+            cmbTargetFormat.Items.Clear();
+            foreach (string item in this.doelformaten)
+            {
+                cmbTargetFormat.Items.Add(item);
+            }
 
+        }
       
 
 
 
         public FrmGenerateLabelFormat(IEnumerable<string> doelformaten)
         {
+            this.doelformaten = doelformaten;
             InitializeComponent();
-            foreach (string item in doelformaten)
-            {
-                cmbTargetFormat.Items.Add(item);
-            }
 
+            refreshDoelFormaten();
 
             cmbTargetFormat.SelectedIndex = 0;
 
             lstTypeToestel.Items.Add("Sm5500");
             lstTypeToestel.Items.Add("Sm5100");
+            lstTypeToestel.Items.Add("Infotag");
             lstTypeToestel.SelectedIndex = 0;
 
             this.chkArticleName.Checked = true;
@@ -212,6 +221,11 @@ namespace DigiLabelFormats
                 somethingChecked = true;
             }
 
+            if (this.chkPromo.Checked)
+            {
+                formatCode = formatCode + "Pr";
+                somethingChecked = true;
+            }
 
             if (!this.chkArticleName.Checked)
             {
@@ -307,6 +321,27 @@ namespace DigiLabelFormats
                     lstAfmetingen.Items.Add("60x90");
                     lstAfmetingen.Items.Add("60x100");
                     lstAfmetingen.Items.Add("60x120");
+                    break;
+                case "Infotag":
+                    lstAfmetingen.Items.Add("1.44 inch normal");
+                    lstAfmetingen.Items.Add("1.44 inch promo");
+                    lstAfmetingen.Items.Add("2 inch normal");
+                    lstAfmetingen.Items.Add("2 inch promo");
+                    lstAfmetingen.Items.Add("2.7 inch normal");
+                    lstAfmetingen.Items.Add("2.7 inch norm.100g");
+                    lstAfmetingen.Items.Add("2.7 inch promo");
+                    lstAfmetingen.Items.Add("2.7 inch prom.100g");
+                    lstAfmetingen.Items.Add("2.9 inch normal");
+                    lstAfmetingen.Items.Add("2.9 inch normal color");
+                    lstAfmetingen.Items.Add("2.9 inch promo");
+                    lstAfmetingen.Items.Add("2.9 inch promo color");
+                    lstAfmetingen.Items.Add("4.41 inch normal");
+                    lstAfmetingen.Items.Add("4.41 inch promo");
+                    lstAfmetingen.Items.Add("6 inch normal");
+                    lstAfmetingen.Items.Add("6 inch normal color");
+                    lstAfmetingen.Items.Add("6 inch promo");
+                    lstAfmetingen.Items.Add("6 inch promo color");
+
 
                     break;
             }
@@ -349,9 +384,21 @@ namespace DigiLabelFormats
             {
                 case 0:
                     sm5500LabelTexts = true;
+                    cmbTargetFormat.Enabled = true;
+                    refreshDoelFormaten();
+                    cmbTargetFormat.SelectedIndex = 0;
                     break;
                 case 1:
                     sm5500LabelTexts = false;
+                    cmbTargetFormat.Enabled = true;
+                    refreshDoelFormaten();
+                    cmbTargetFormat.SelectedIndex = 0;
+                break;
+                case 2:
+                     sm5500LabelTexts = true;
+                     cmbTargetFormat.Text = assignInfotagNr();
+                     cmbTargetFormat.Enabled = false;
+                    
                 break;
             }
            
@@ -361,6 +408,72 @@ namespace DigiLabelFormats
            AdjustButtons();
            ErrorMessage();
         }
+
+        private string assignInfotagNr()
+        {
+            string infotagnr = "";
+            switch (this.lstAfmetingen.SelectedIndex)
+            {
+                case 0:
+                    infotagnr = "1001";
+                    break;
+                case 1:
+                    infotagnr = "1021";
+                    break;
+                case 2:
+                    infotagnr = "1002";
+                    break;
+                case 3:
+                    infotagnr = "1022";
+                    break;
+                case 4:
+                    infotagnr = "1003";
+                    break;
+                case 5:
+                    infotagnr = "1007";
+                    break;
+                case 6:
+                    infotagnr = "1023";
+                    break;
+                case 7:
+                    infotagnr = "1027";
+                    break;
+                case 8:
+                    infotagnr = "1005";
+                    break;
+                case 9:
+                    infotagnr = "1015";
+                    break;
+                case 10:
+                    infotagnr = "1028";
+                    break;
+                case 11:
+                    infotagnr = "1038";
+                    break;
+                case 12:
+                    infotagnr = "1004";
+                    break;
+                case 13:
+                    infotagnr = "1024";
+                    break;
+                case 14:
+                    infotagnr = "1008";
+                    break;
+                case 15:
+                    infotagnr = "1018";
+                    break;
+                case 16:
+                    infotagnr = "1028";
+                    break;
+                case 17:
+                    infotagnr = "1038";
+                    break;
+            }
+            return infotagnr;
+        
+        }
+
+
 
 
         private void AdjustControls()
@@ -374,8 +487,24 @@ namespace DigiLabelFormats
             {
                 lstTypeToestel.SelectedIndex = 1;
             }
+            if (labelformatCode.Contains("Infotag"))
+            {
+                lstTypeToestel.SelectedIndex = 2;
+            }
             int sizeIndex = 0;
             string formatSize = labelformatCode.Substring(7, 5);
+            if (labelformatCode.Contains("Infotag"))
+            {
+                string part = labelformatCode.Substring(8, labelformatCode.Length - 8);
+                int split = part.IndexOf("_");
+                
+                //codedevice = FormaatCode.IndexOf("_");
+                //codesize = 7;
+                //codesizestart = 8;
+                //infotag = true;
+                formatSize = labelformatCode.Substring(8, split);
+            }
+
             foreach (var item in lstAfmetingen.Items.Cast<object>().Where(item => item.ToString().Contains(formatSize)))
             {
                 sizeIndex = lstAfmetingen.Items.IndexOf(item);
@@ -434,6 +563,8 @@ namespace DigiLabelFormats
             this.chkCooling.Checked = labelformatCode.Substring(13).Contains("Ci");
 
             this.chkFreezing.Checked = labelformatCode.Substring(13).Contains("Cf");
+
+            this.chkPromo.Checked = labelformatCode.Substring(13).Contains("Pr");
 
             this.chkArticleName.Checked = !labelformatCode.Substring(13).Contains("A0");
 

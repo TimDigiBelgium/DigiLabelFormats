@@ -154,6 +154,21 @@
     <Content Include="LblFrmts\Customer\Proxy Delhaize\Dp5000\Bakkerij\40x92 Registratie\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Infotag\1.44 inch normal\Infotag_1.44 inch normal_PnW0Q0T0S0I0\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\1.44 inch promo\Infotag_1.44 inch promo_PnPrW0Q0T0S0I0\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\2 inch normal\Infotag_2 inch normal_PnW0Q0T0S0I0\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\2 inch promo\Infotag_2 inch promo_PnPrW0Q0T0S0I0\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\2.7 inch normal\Infotag_2.7 inch normal_PnSlW0Q0T0S0\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5100\60x100\Sm5100_60x100_BcPdUdTf\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2295,6 +2310,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_UdTvQ0\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\1.44 inch normal\Infotag_1.44 inch normal_PnW0Q0T0S0I0\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\2 inch normal\Infotag_2 inch normal_PnW0Q0T0S0I0\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\1.44 inch promo\Infotag_1.44 inch promo_PnPrW0Q0T0S0I0\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\2 inch promo\Infotag_2 inch promo_PnPrW0Q0T0S0I0\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Infotag\2.7 inch normal\Infotag_2.7 inch normal_PnSlW0Q0T0S0\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="LblFrmts\Database\Sm5500\60x60\Sm5500_60x60_PdSmOpCwTvTt\freeformats.dat" />
@@ -4966,6 +4996,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
+    <Folder Include="LblFrmts\Database\Infotag\2.7 inch promo\Infotag_2.7 inch promo_PnPrW0Q0T0S0I0\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

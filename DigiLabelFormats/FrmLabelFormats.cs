@@ -702,6 +702,8 @@ namespace DigiLabelFormats
                     {
                         string nlTexts;
                         string frTexts;
+                        string deTexts;
+
                         switch (lstLanguage.SelectedIndex)
                         {
                             case 0:
@@ -732,6 +734,19 @@ namespace DigiLabelFormats
                                 }
 
                                 File.Copy(frTexts, Folders.SendDat, true);
+                                File.AppendAllText(Folders.SendDat, WriteFormatFile());
+                                break;
+                            case 3:
+                                if (sm5500labeltexts)
+                                {
+                                    deTexts = @Folders.Sm5500DuitseTeksten;
+                                }
+                                else
+                                {
+                                    deTexts = @Folders.Sm5100DuitseTeksten;
+                                }
+
+                                File.Copy(deTexts, Folders.SendDat, true);
                                 File.AppendAllText(Folders.SendDat, WriteFormatFile());
                                 break;
 

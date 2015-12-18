@@ -72,14 +72,17 @@
             this.chkWeight = new System.Windows.Forms.CheckBox();
             this.chkArticleName = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.chkFreezing = new System.Windows.Forms.CheckBox();
             this.chkCooling = new System.Windows.Forms.CheckBox();
             this.chkNuts = new System.Windows.Forms.CheckBox();
             this.chkBeef = new System.Windows.Forms.CheckBox();
             this.chkHeating = new System.Windows.Forms.CheckBox();
+            this.chkPromo = new System.Windows.Forms.CheckBox();
             this.btnToCreate = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
-            this.chkPromo = new System.Windows.Forms.CheckBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.chkInfoTagVanaf = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPieces)).BeginInit();
             this.grpVlees.SuspendLayout();
@@ -93,6 +96,7 @@
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -132,7 +136,7 @@
             this.btnOK.BackColor = System.Drawing.Color.LightGreen;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.Location = new System.Drawing.Point(311, 440);
+            this.btnOK.Location = new System.Drawing.Point(311, 461);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(137, 50);
             this.btnOK.TabIndex = 5;
@@ -370,9 +374,9 @@
             // 
             this.groupBox2.Controls.Add(this.lstAfmetingen);
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 93);
+            this.groupBox2.Location = new System.Drawing.Point(14, 120);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(135, 291);
+            this.groupBox2.Size = new System.Drawing.Size(135, 285);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Select size";
@@ -393,7 +397,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.LightSalmon;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(164, 440);
+            this.btnCancel.Location = new System.Drawing.Point(164, 461);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(137, 50);
             this.btnCancel.TabIndex = 20;
@@ -404,7 +408,7 @@
             // 
             this.groupBox3.Controls.Add(this.cmbTargetFormat);
             this.groupBox3.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 390);
+            this.groupBox3.Location = new System.Drawing.Point(13, 411);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(135, 44);
             this.groupBox3.TabIndex = 21;
@@ -415,7 +419,7 @@
             // 
             this.groupBox4.Controls.Add(this.txtLabelFormatCode);
             this.groupBox4.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(164, 390);
+            this.groupBox4.Location = new System.Drawing.Point(164, 411);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(433, 44);
             this.groupBox4.TabIndex = 22;
@@ -426,7 +430,7 @@
             // 
             this.btnBrowse.BackColor = System.Drawing.Color.DarkTurquoise;
             this.btnBrowse.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(12, 440);
+            this.btnBrowse.Location = new System.Drawing.Point(12, 461);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(137, 50);
             this.btnBrowse.TabIndex = 23;
@@ -440,7 +444,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(13, 8);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(135, 79);
+            this.groupBox5.Size = new System.Drawing.Size(135, 106);
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Select device";
@@ -451,7 +455,7 @@
             this.lstTypeToestel.ItemHeight = 14;
             this.lstTypeToestel.Location = new System.Drawing.Point(6, 21);
             this.lstTypeToestel.Name = "lstTypeToestel";
-            this.lstTypeToestel.Size = new System.Drawing.Size(123, 46);
+            this.lstTypeToestel.Size = new System.Drawing.Size(123, 74);
             this.lstTypeToestel.TabIndex = 0;
             this.lstTypeToestel.SelectedIndexChanged += new System.EventHandler(this.ChangeDevice);
             // 
@@ -586,7 +590,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.chkPromo);
+            this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Controls.Add(this.chkFreezing);
             this.groupBox6.Controls.Add(this.chkCooling);
             this.groupBox6.Controls.Add(this.chkNuts);
@@ -595,10 +599,20 @@
             this.groupBox6.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(158, 254);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(439, 130);
+            this.groupBox6.Size = new System.Drawing.Size(439, 99);
             this.groupBox6.TabIndex = 30;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Variable text fields";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(13, 96);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(251, 48);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Temperature";
             // 
             // chkFreezing
             // 
@@ -655,12 +669,23 @@
             this.chkHeating.UseVisualStyleBackColor = true;
             this.chkHeating.CheckedChanged += new System.EventHandler(this.ChangeFormatCode);
             // 
+            // chkPromo
+            // 
+            this.chkPromo.AutoSize = true;
+            this.chkPromo.Location = new System.Drawing.Point(13, 21);
+            this.chkPromo.Name = "chkPromo";
+            this.chkPromo.Size = new System.Drawing.Size(98, 18);
+            this.chkPromo.TabIndex = 21;
+            this.chkPromo.Text = "\"Aanbieding\"";
+            this.chkPromo.UseVisualStyleBackColor = true;
+            this.chkPromo.CheckedChanged += new System.EventHandler(this.ChangeFormatCode);
+            // 
             // btnToCreate
             // 
             this.btnToCreate.BackColor = System.Drawing.Color.LightGreen;
             this.btnToCreate.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnToCreate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToCreate.Location = new System.Drawing.Point(460, 440);
+            this.btnToCreate.Location = new System.Drawing.Point(460, 461);
             this.btnToCreate.Name = "btnToCreate";
             this.btnToCreate.Size = new System.Drawing.Size(137, 50);
             this.btnToCreate.TabIndex = 31;
@@ -677,22 +702,35 @@
             this.lblError.TabIndex = 32;
             this.lblError.Text = " ";
             // 
-            // chkPromo
+            // groupBox8
             // 
-            this.chkPromo.AutoSize = true;
-            this.chkPromo.Location = new System.Drawing.Point(13, 105);
-            this.chkPromo.Name = "chkPromo";
-            this.chkPromo.Size = new System.Drawing.Size(150, 18);
-            this.chkPromo.TabIndex = 21;
-            this.chkPromo.Text = "\"Aanbieding\" (infotag)";
-            this.chkPromo.UseVisualStyleBackColor = true;
-            this.chkPromo.CheckedChanged += new System.EventHandler(this.ChangeFormatCode);
+            this.groupBox8.Controls.Add(this.chkInfoTagVanaf);
+            this.groupBox8.Controls.Add(this.chkPromo);
+            this.groupBox8.Font = new System.Drawing.Font("Cambria", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(158, 359);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(431, 48);
+            this.groupBox8.TabIndex = 14;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Infotag";
+            // 
+            // chkInfoTagVanaf
+            // 
+            this.chkInfoTagVanaf.AutoSize = true;
+            this.chkInfoTagVanaf.Location = new System.Drawing.Point(117, 21);
+            this.chkInfoTagVanaf.Name = "chkInfoTagVanaf";
+            this.chkInfoTagVanaf.Size = new System.Drawing.Size(218, 18);
+            this.chkInfoTagVanaf.TabIndex = 22;
+            this.chkInfoTagVanaf.Text = "Promo tekst \"vanaf ... kg ... euro/kg\"";
+            this.chkInfoTagVanaf.UseVisualStyleBackColor = true;
+            this.chkInfoTagVanaf.CheckedChanged += new System.EventHandler(this.ChangeFormatCode);
             // 
             // FrmGenerateLabelFormat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1345, 511);
+            this.ClientSize = new System.Drawing.Size(1345, 519);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnToCreate);
             this.Controls.Add(this.groupBox6);
@@ -736,6 +774,8 @@
             this.groupBox10.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -795,5 +835,8 @@
         private System.Windows.Forms.Button btnToCreate;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.CheckBox chkPromo;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.CheckBox chkInfoTagVanaf;
     }
 }

@@ -227,6 +227,12 @@ namespace DigiLabelFormats
                 somethingChecked = true;
             }
 
+            if (this.chkInfoTagVanaf.Checked)
+            {
+                formatCode = formatCode + "Iv";
+                somethingChecked = true;
+            }
+
             if (!this.chkArticleName.Checked)
             {
                 formatCode = formatCode + "A0";
@@ -332,15 +338,15 @@ namespace DigiLabelFormats
                     lstAfmetingen.Items.Add("2.7 inch promo");
                     lstAfmetingen.Items.Add("2.7 inch prom.100g");
                     lstAfmetingen.Items.Add("2.9 inch normal");
-                    lstAfmetingen.Items.Add("2.9 inch normal color");
+                    lstAfmetingen.Items.Add("2.9 inch norm.color");
                     lstAfmetingen.Items.Add("2.9 inch promo");
-                    lstAfmetingen.Items.Add("2.9 inch promo color");
+                    lstAfmetingen.Items.Add("2.9 inch prom.color");
                     lstAfmetingen.Items.Add("4.41 inch normal");
                     lstAfmetingen.Items.Add("4.41 inch promo");
                     lstAfmetingen.Items.Add("6 inch normal");
-                    lstAfmetingen.Items.Add("6 inch normal color");
+                    lstAfmetingen.Items.Add("6 inch norm.color");
                     lstAfmetingen.Items.Add("6 inch promo");
-                    lstAfmetingen.Items.Add("6 inch promo color");
+                    lstAfmetingen.Items.Add("6 inch prom.color");
 
 
                     break;
@@ -445,10 +451,10 @@ namespace DigiLabelFormats
                     infotagnr = "1015";
                     break;
                 case 10:
-                    infotagnr = "1028";
+                    infotagnr = "1025";
                     break;
                 case 11:
-                    infotagnr = "1038";
+                    infotagnr = "1035";
                     break;
                 case 12:
                     infotagnr = "1004";
@@ -565,6 +571,8 @@ namespace DigiLabelFormats
             this.chkFreezing.Checked = labelformatCode.Substring(13).Contains("Cf");
 
             this.chkPromo.Checked = labelformatCode.Substring(13).Contains("Pr");
+
+            this.chkInfoTagVanaf.Checked = labelformatCode.Substring(13).Contains("Iv");
 
             this.chkArticleName.Checked = !labelformatCode.Substring(13).Contains("A0");
 

@@ -44,6 +44,7 @@
 010107AA45AB04000000PRIJS/Kg
 010107AA46AB04000000PRIJS/Stk
 010107AA50AB04000000  Let op: geef schadelijke bacteriën geen kans.       '~04000000   Zorg daarom dat deze bacteriën niet via de         '~04000000   verpakking, uw handen of het keukengerei in       '~04000000  uw eten terecht komen. Maak dit vlees door en      '~04000000  door gaar om deze bacteriëen uit te schakelen.     '
+010107AA51AB04000000PLU
 010107AA81AB04000000Geboren in
 010107AA82AB04000000Vetgemest in
 010107AA83AB04000000Geslacht in

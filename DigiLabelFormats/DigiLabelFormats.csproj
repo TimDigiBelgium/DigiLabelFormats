@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>103</ApplicationRevision>
+    <ApplicationRevision>106</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -194,9 +194,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Infotag\4.41 inch normal\Infotag_4.41 inch normal_PnLlTrW0Q0T0S0I0\kg.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LblFrmts\Database\Infotag\4.41 inch normal\Infotag_4.41 inch normal_PnLlTrW0Q0T0S0I0\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Infotag\4.41 inch normal\Infotag_4.41 inch normal_PnTrW0Q0T0S0I0\kg.png">
@@ -747,6 +744,12 @@
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_PdSmOpSlU0T0\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_UdPn\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_UdPn\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_UdSlTv\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1041,6 +1044,12 @@
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_BcUdTvCf\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_PdSmUdLlTrTfTt\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_PdSmUdLlTrTfTt\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_UdLlCwTv\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1069,6 +1078,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_UdSlTv\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_UdTv\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_UdTv\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\DataFiles\Label teksten\Sm5100\DE_Standaard Label Teksten.txt">
@@ -2878,6 +2893,9 @@
     <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcUdTv\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_UdPn\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_PdSmOpSlU0T0\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -3020,6 +3038,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_BcSmUdLlTrTvTt\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_UdTv\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_PdSmUdLlTrTfTt\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="LblFrmts\InfoTags\Standaard File\RECEIVE.DAT" />

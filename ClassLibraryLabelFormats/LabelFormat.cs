@@ -78,7 +78,8 @@ namespace ClassLibraryLabelFormats
 
         //constructor bij standaard formaten
         public LabelFormat(string doelFormaat, string formaatCode)
-        {
+        {   
+            if(formaatCode!=""){
             DoelFormaat = doelFormaat;
             FormaatCode = formaatCode;
             DigiDriverText = AssignDigidriverText(formaatCode);
@@ -97,6 +98,33 @@ namespace ClassLibraryLabelFormats
             }
            
             AssignImages();
+        }
+        }
+
+        //constructor bij standaard formaten
+        public LabelFormat(string doelFormaat, string formaatCode, string omschrijving)
+        {
+            if (formaatCode != "")
+            {
+                DoelFormaat = doelFormaat;
+                FormaatCode = formaatCode;
+                DigiDriverText = AssignDigidriverText(formaatCode);
+                Omschrijving = omschrijving;
+                if (formaatCode.Contains("Infotag"))
+                {
+                    this.Size = formaatCode.Substring(7, 6).Replace("_", "");
+                    // this.Width = Convert.ToInt32(Size.Substring(0, 2));
+                    //this.Height = Convert.ToInt32(Size.Substring(3));
+                }
+                else if (!formaatCode.Contains("Linerless"))
+                {
+                    this.Size = formaatCode.Substring(7, 6).Replace("_", "");
+                    this.Width = Convert.ToInt32(Size.Substring(0, 2));
+                    this.Height = Convert.ToInt32(Size.Substring(3));
+                }
+
+                AssignImages();
+            }
         }
 
         //constructor bij standaard formaten
@@ -135,14 +163,14 @@ namespace ClassLibraryLabelFormats
          
         }
 
-        //constructor bij externe formaten
-        public LabelFormat(string doelFormaat, string formaatCode, string digiDriverText)
-        {
-            DoelFormaat = doelFormaat;
-            FormaatCode = formaatCode;
-            DigiDriverText = digiDriverText;
-            Omschrijving = "";
-        }
+        ////constructor bij externe formaten
+        //public LabelFormat(string doelFormaat, string formaatCode, string digiDriverText)
+        //{
+        //    DoelFormaat = doelFormaat;
+        //    FormaatCode = formaatCode;
+        //    DigiDriverText = digiDriverText;
+        //    Omschrijving = "";
+        //}
 
         public LabelFormat(string doelFormaat, string formaatCode, string omschrijving, string digiDriverText)
         {
@@ -177,11 +205,15 @@ namespace ClassLibraryLabelFormats
         private string AssignDigidriverText(string formaatCode)
         {
             string digiDriverFilePath = "";
+            string digidriverText = "";
 
             //bool linerless = false;
 
 
-
+            if (formaatCode!="")
+            {
+                
+           
 
             if (formaatCode.Substring(0, 8) == "Customer"|| formaatCode.Substring(0, 8) == "Salesmen")
             {
@@ -247,13 +279,14 @@ namespace ClassLibraryLabelFormats
 
 
 
-            string digidriverText = "";
+           
             if (File.Exists(digiDriverFilePath))
             {
 
                 digidriverText = File.ReadAllText(digiDriverFilePath);
                 digidriverText = digidriverText.Replace("AA0070", changeTargetFormat(DoelFormaat));
 
+            }
             }
 
             return digidriverText;
@@ -286,6 +319,10 @@ namespace ClassLibraryLabelFormats
         private static string MaakOmschrijving(string labelformatCode)
         {
             string omschrijving = "";
+            if (labelformatCode!="")
+            {
+                
+            
             if (labelformatCode.Substring(0, 8) != "Customer" && labelformatCode.Substring(0, 8) != "Salesmen")
             {
 
@@ -293,6 +330,8 @@ namespace ClassLibraryLabelFormats
 
                 if (!labelformatCode.Contains("Totaal"))
                 {
+
+
                     
                     if (!labelformatCode.Substring(13).Contains("A0"))
                     {
@@ -445,6 +484,7 @@ namespace ClassLibraryLabelFormats
                 {
                     omschrijving = omschrijving + "Verkoper" + Environment.NewLine;
                 }
+            }
             }
             
 

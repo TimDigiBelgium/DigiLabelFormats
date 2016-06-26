@@ -155,11 +155,7 @@ namespace DigiLabelFormats
                     break;
             }
             lstAfmetingen.SelectedIndex = 3;
-            this.chkAantal.Checked = true;
-            this.chkBarcode.Checked = true;
-            this.chkGewicht.Checked = true;
-            this.chkInpakDatum.Checked = true;
-            this.chkVerkoper.Checked = true;
+            
             ChangeFormatCode(sender, e);
         }
 

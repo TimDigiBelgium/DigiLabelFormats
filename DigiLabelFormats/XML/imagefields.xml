@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<fields>
+  <field>
+    <name>Shop logo, small next to shop name</name>
+    <code>Sl</code>
+    <defaultselected>false</defaultselected>
+    <index>0</index>
+  </field>
+  <field>
+    <name>Large logo, on top of the label</name>
+    <code>Ll</code>
+    <defaultselected>false</defaultselected>
+    <index>1</index>
+  </field>
+</fields>

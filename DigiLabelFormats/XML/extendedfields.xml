@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<fields>
+  <field>
+    <name>Barcode</name>
+    <code>Bc</code>
+    <defaultselected>true</defaultselected>
+    <index>0</index>
+  </field>
+  <field>
+    <name>Packed date</name>
+    <code>Pd</code>
+    <defaultselected>false</defaultselected>
+    <index>1</index>
+  </field>
+  <field>
+    <name>Special message</name>
+    <code>Sm</code>
+    <defaultselected>false</defaultselected>
+    <index>2</index>
+  </field>
+  <field>
+    <name>Use by date</name>
+    <code>Ud</code>
+    <defaultselected>true</defaultselected>
+    <index>3</index>
+  </field>
+  <field>
+    <name>Sell by date</name>
+    <code>Sd</code>
+    <defaultselected>false</defaultselected>
+    <index>4</index>
+  </field>
+  <field>
+    <name>Operator</name>
+    <code>Op</code>
+    <defaultselected>false</defaultselected>
+    <index>5</index>
+  </field>
+  <field>
+    <name>Plu number</name>
+    <code>Pn</code>
+    <defaultselected>false</defaultselected>
+    <index>6</index>
+  </field>
+  <field>
+    <name>Fixed weight</name>
+    <code>Fw</code>
+    <defaultselected>false</defaultselected>
+    <index>7</index>
+  </field>
+</fields>

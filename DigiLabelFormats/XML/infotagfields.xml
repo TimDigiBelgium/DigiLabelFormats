@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<fields>
+  <field>
+    <name>"Aanbieding"</name>
+    <code>Pr</code>
+    <defaultselected>false</defaultselected>
+    <index>0</index>
+  </field>
+  <field>
+    <name>Promo text "vanaf ... kg ... euro/kg"</name>
+    <code>Iv</code>
+    <defaultselected>false</defaultselected>
+    <index>1</index>
+  </field>
+</fields>

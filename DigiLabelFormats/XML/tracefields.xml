@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<fields>
+  <field>
+    <name>Born in</name>
+    <code>T1</code>
+    <defaultselected>false</defaultselected>
+    <index>0</index>
+  </field>
+  <field>
+    <name>Fatten in</name>
+    <code>T2</code>
+    <defaultselected>false</defaultselected>
+    <index>1</index>
+  </field>
+  <field>
+    <name>Slaughtered in</name>
+    <code>T3</code>
+    <defaultselected>false</defaultselected>
+    <index>2</index>
+  </field>
+  <field>
+    <name>Cut in</name>
+    <code>T4</code>
+    <defaultselected>false</defaultselected>
+    <index>3</index>
+  </field>
+  <field>
+    <name>Country of origin</name>
+    <code>T5</code>
+    <defaultselected>false</defaultselected>
+    <index>4</index>
+  </field>
+  <field>
+    <name>Reference number</name>
+    <code>T6</code>
+    <defaultselected>false</defaultselected>
+    <index>5</index>
+  </field>
+</fields>

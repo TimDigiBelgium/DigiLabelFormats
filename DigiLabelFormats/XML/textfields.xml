@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<fields>
+  <field>
+    <name>Chicken warning</name>
+    <code>Cw</code>
+    <defaultselected>false</defaultselected>
+    <index>0</index>
+  </field>
+  <field>
+    <name>"Verhitten tot in de kern"</name> <!--Heating info -->
+    <code>Ht</code>
+    <defaultselected>false</defaultselected>
+    <index>1</index>
+  </field>
+  <field>
+    <name>"Kalfsvlees jonger dan 8 maanden"</name> <!--Beef info -->
+    <code>Bi</code>
+    <defaultselected>false</defaultselected>
+    <index>2</index>
+  </field>
+  <field>
+    <name>"Dit product kan sporen van noten en sesam bevatten"</name> <!--Nuts info -->
+    <code>Ni</code>
+    <defaultselected>false</defaultselected>
+    <index>3</index>
+  </field>
+  <field>
+    <name>"Mits gekoeld bij -18C"</name> <!--Cooling info -->
+    <code>Ci</code>
+    <defaultselected>false</defaultselected>
+    <index>4</index>
+  </field>
+  <field>
+    <name>"Een ontdooid product niet opnieuw invriezen"</name> <!--Freezing info -->
+    <code>Cf</code>
+    <defaultselected>false</defaultselected>
+    <index>5</index>
+  </field>
+</fields>

@@ -6,6 +6,9 @@ using System.Linq;
 using System.Windows.Forms;
 using ClassLibraryLabelFormats;
 using DigiLabelFormats.Properties;
+using System.Xml.Linq;
+using DigiLabelFormats.Classes;
+using System.Data;
 
 namespace DigiLabelFormats
 {
@@ -19,7 +22,7 @@ namespace DigiLabelFormats
             get
             {
 
-                return new LabelFormat(cmbTargetFormat.Text, txtLabelFormatCode.Text);
+                return new LabelFormat(cmbTargetFormat.Text, txtLabelFormatCode.Text, Omschrijving());
 
 
             }
@@ -33,6 +36,66 @@ namespace DigiLabelFormats
             private set;
         }
 
+
+
+
+        public List<clsLabelField> basicfields
+        {
+            get
+            {
+                return ListFactory(@"\XML\basicfields.xml");
+            }
+        }
+
+        public List<clsLabelField> extendedfields
+        {
+            get
+            {
+                return ListFactory(@"\XML\extendedfields.xml");
+            }
+        }
+
+        public List<clsLabelField> tracefields
+        {
+            get
+            {
+                return ListFactory(@"\XML\tracefields.xml");
+            }
+
+        }
+
+        public List<clsLabelField> temperaturefields
+        {
+            get
+            {
+                return ListFactory(@"\XML\temperaturefields.xml");
+            }
+        }
+
+        public List<clsLabelField> textfields
+        {
+            get
+            {
+                return ListFactory(@"\XML\textfields.xml");
+            }
+        }
+
+        public List<clsLabelField> imagefields
+        {
+            get
+            {
+                return ListFactory(@"\XML\imagefields.xml");
+            }
+        }
+
+        public List<clsLabelField> infotagfields
+        {
+            get
+            {
+                return ListFactory(@"\XML\infotagfields.xml");
+            }
+        }
+
         public void refreshDoelFormaten()
         {
             cmbTargetFormat.Items.Clear();
@@ -42,7 +105,9 @@ namespace DigiLabelFormats
             }
 
         }
-      
+
+
+
 
 
 
@@ -60,233 +125,269 @@ namespace DigiLabelFormats
             lstTypeToestel.Items.Add("Infotag");
             lstTypeToestel.SelectedIndex = 0;
 
-            this.chkArticleName.Checked = true;
-            this.chkWeight.Checked = true;
-            this.chkQuantity.Checked = true;
-            this.chkUnitPrice.Checked = true;
-            this.chkTotalPrice.Checked = true;
-            this.chkShopName.Checked = true;
-            this.chkIngredients.Checked = true;
 
-            radioGeenTemp.Checked = true;
-            radioGeenVlees.Checked = true;
+
+            lstBasicFields.DataSource = basicfields;
+            lstBasicFields.DisplayMember = "Name";
+            lstBasicFields.ValueMember = "Code";
+
+
+
+
+
+            lstExtendedFields.DataSource = extendedfields;
+            lstExtendedFields.DisplayMember = "Name";
+            lstExtendedFields.ValueMember = "Code";
+
+
+            lstTraceability.DataSource = tracefields;
+            lstTraceability.DisplayMember = "Name";
+            lstTraceability.ValueMember = "Code";
+
+            lstTemperatures.DataSource = temperaturefields;
+            lstTemperatures.DisplayMember = "Name";
+            lstTemperatures.ValueMember = "Code";
+
+            lstShoplogos.DataSource = imagefields;
+            lstShoplogos.DisplayMember = "Name";
+            lstShoplogos.ValueMember = "Code";
+
+
+            lstTextFields.DataSource = textfields;
+            lstTextFields.DisplayMember = "Name";
+            lstTextFields.ValueMember = "Code";
+
+            lstInfotag.DataSource = infotagfields;
+            lstInfotag.DisplayMember = "Name";
+            lstInfotag.ValueMember = "Code";
+
 
             this.btnToCreate.Enabled = false;
-           
 
+
+
+
+
+        }
+
+        public string Omschrijving()
+        {
+
+            string omschrijving = "";
+
+
+            foreach (clsLabelField element in this.lstExtendedFields.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+            }
+
+            foreach (clsLabelField element in this.lstShoplogos.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+            }
+
+
+            foreach (clsLabelField element in this.lstTraceability.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+
+            }
+
+            //formatCode = formatCode.Replace("T1T2T3T4T6", "Tr");
+
+            foreach (clsLabelField element in this.lstTemperatures.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+            }
+
+            foreach (clsLabelField element in this.lstTextFields.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+            }
+
+
+
+            foreach (clsLabelField element in this.lstInfotag.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+            }
+
+            foreach (clsLabelField element in lstBasicFields.SelectedItems)
+            {
+                omschrijving += element.Name + Environment.NewLine;
+            }
+
+
+
+
+
+
+
+            return omschrijving;
+        }
+
+        private void defaultselections()
+        {
+
+            for (int i = 0; i < lstBasicFields.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstBasicFields.Items[i];
+                lstBasicFields.SetSelected(i, LF.defaultSelected);
+            }
+
+            for (int i = 0; i < lstExtendedFields.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstExtendedFields.Items[i];
+                lstExtendedFields.SetSelected(i, LF.defaultSelected);
+            }
+
+            for (int i = 0; i < this.lstTemperatures.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstTemperatures.Items[i];
+                if (LF.defaultSelected)
+                {
+                    lstTemperatures.SetSelected(i, true);
+                }
+
+            }
+
+            for (int i = 0; i < lstTraceability.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstTraceability.Items[i];
+                lstTraceability.SetSelected(i, LF.defaultSelected);
+            }
+
+            for (int i = 0; i < lstTextFields.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstTextFields.Items[i];
+                lstTextFields.SetSelected(i, LF.defaultSelected);
+            }
+
+            for (int i = 0; i < lstShoplogos.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstShoplogos.Items[i];
+                lstShoplogos.SetSelected(i, LF.defaultSelected);
+            }
+
+
+            for (int i = 0; i < lstInfotag.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstInfotag.Items[i];
+                lstInfotag.SetSelected(i, LF.defaultSelected);
+            }
 
         }
 
         private void frmGenerateLabelFormat_Load(object sender, EventArgs e)
         {
             CenterToScreen();
+            defaultselections();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+
+        public List<clsLabelField> ListFactory(string xmlfilename)
         {
+            XElement xelement = XElement.Load(Directory.GetCurrentDirectory() + xmlfilename);
 
+            List<clsLabelField> _lbList = new List<clsLabelField>();
+
+            foreach (XElement item in xelement.Descendants("field"))
+            {
+                _lbList.Add(new clsLabelField
+                {
+                    Name = item.Element("name").Value,
+                    Code = item.Element("code").Value,
+                    ID = int.Parse(item.Element("index").Value),
+                    defaultSelected = (bool)item.Element("defaultselected")
+                });
+            }
+
+            return _lbList;
         }
-
-
 
 
 
 
         private string GenerateFormat()
         {
-            bool somethingChecked = false;
-            string formatCode = lstTypeToestel.Text + "_";
+            string basicformatCode = lstTypeToestel.Text + "_";
             if (lstAfmetingen.Text == "")
             {
                 lstAfmetingen.Text = Resources.FrmGenerateLabelFormat_GenerateFormat__60x49;
             }
-            formatCode = formatCode + lstAfmetingen.Text + "_";
+            basicformatCode = basicformatCode + lstAfmetingen.Text + "_";
 
-          
-            
-            if (chkBarcode.Checked)
+            if (lstBasicFields.Items.Count > 0)
             {
-                formatCode = formatCode + "Bc";
-                somethingChecked = true;
-            }
-            if (chkInpakDatum.Checked)
-            {
-                formatCode = formatCode + "Pd";
-                somethingChecked = true;
-            }
-            if (chkBewaarAdvies.Checked)
-            {
-                formatCode = formatCode + "Sm";
-                somethingChecked = true;
-            }
-            if (chkTGT.Checked)
-            {
-                formatCode = formatCode + "Ud";
-                somethingChecked = true;
-            }
-            if (chkUVD.Checked)
-            {
-                formatCode = formatCode + "Sd";
-                somethingChecked = true;
-            }
 
-            if (chkOperator.Checked)
-            {
-                formatCode = formatCode + "Op";
-                somethingChecked = true;
-            }
-
-            if (chkPluNumber.Checked)
-            {
-                formatCode = formatCode + "Pn";
-                somethingChecked = true;
-            }
-
-            if (chkShopLogo.Checked)
-            {
-                formatCode = formatCode + "Sl";
-                somethingChecked = true;
-            }
-
-            if (this.chkShopLarge.Checked)
-            {
-                formatCode = formatCode + "Ll";
-                somethingChecked = true;
-            }
-
-           
+                string formatCode;
+                formatCode = "";
 
 
 
-            if (radioTrace.Checked)
-            {
-                formatCode = formatCode + "Tr";
-                somethingChecked = true;
-            }
 
-            if (radioKip.Checked)
-            {
-                formatCode = formatCode + "Cw";
-                somethingChecked = true;
-            }
 
-            if (radioTempVast.Checked)
+
+
+
+                foreach (clsLabelField element in this.lstExtendedFields.SelectedItems)
+                {
+                    formatCode += element.Code;
+                }
+
+                foreach (clsLabelField element in this.lstShoplogos.SelectedItems)
+                {
+                    formatCode += element.Code;
+                }
+
+
+                foreach (clsLabelField element in this.lstTraceability.SelectedItems)
+                {
+                    formatCode += element.Code;
+
+                }
+
+                formatCode = formatCode.Replace("T1T2T3T4T6", "Tr");
+
+                foreach (clsLabelField element in this.lstTemperatures.SelectedItems)
+                {
+                    formatCode += element.Code;
+                }
+
+                foreach (clsLabelField element in this.lstTextFields.SelectedItems)
+                {
+                    formatCode += element.Code;
+                }
+
+
+
+                foreach (clsLabelField element in this.lstInfotag.SelectedItems)
+                {
+                    formatCode += element.Code;
+                }
+
+                foreach (clsLabelField element in lstBasicFields.Items)
+                {
+                    if (!lstBasicFields.GetSelected(element.ID))
+                        formatCode += element.Code;
+                }
+
+
+
+
+                if (formatCode == "")
+                {
+                    formatCode = "0";
+                }
+                basicformatCode += formatCode;
+            }
+            else
             {
-                formatCode = formatCode + "Tf";
-                somethingChecked = true;
+                basicformatCode += "0";
             }
 
-            if (radioTempVar.Checked)
-            {
-                formatCode = formatCode + "Tv";
-                somethingChecked = true;
-            }
+            return basicformatCode;
 
-            if (chkMinMax.Checked)
-            {
-                formatCode = formatCode + "Tt";
-                somethingChecked = true;
-            }
-
-            if (this.chkHeating.Checked)
-            {
-                formatCode = formatCode + "Ht";
-                somethingChecked = true;
-            }
-
-        
-
-            if (this.chkBeef.Checked)
-            {
-                formatCode = formatCode + "Bi";
-                somethingChecked = true;
-            }
-
-
-            if (this.chkNuts.Checked)
-            {
-                formatCode = formatCode + "Ni";
-                somethingChecked = true;
-            }
-
-            if (this.chkCooling.Checked)
-            {
-                formatCode = formatCode + "Ci";
-                somethingChecked = true;
-            }
-
-            if (this.chkFreezing.Checked)
-            {
-                formatCode = formatCode + "Cf";
-                somethingChecked = true;
-            }
-
-            if (this.chkPromo.Checked)
-            {
-                formatCode = formatCode + "Pr";
-                somethingChecked = true;
-            }
-
-            if (this.chkInfoTagVanaf.Checked)
-            {
-                formatCode = formatCode + "Iv";
-                somethingChecked = true;
-            }
-
-            if (!this.chkArticleName.Checked)
-            {
-                formatCode = formatCode + "A0";
-                somethingChecked = true;
-            }
-
-
-            if (!this.chkWeight.Checked)
-            {
-                formatCode = formatCode + "W0";
-                somethingChecked = true;
-            }
-
-            if (!this.chkQuantity.Checked)
-            {
-                formatCode = formatCode + "Q0";
-                somethingChecked = true;
-            }
-
-            if (!this.chkUnitPrice.Checked)
-            {
-                formatCode = formatCode + "U0";
-                somethingChecked = true;
-            }
-
-            if (!this.chkTotalPrice.Checked)
-            {
-                formatCode = formatCode + "T0";
-                somethingChecked = true;
-            }
-
-            if (!this.chkShopName.Checked)
-            {
-                formatCode = formatCode + "S0";
-                somethingChecked = true;
-            }
-            
-            if (!this.chkIngredients.Checked)
-            {
-                formatCode = formatCode + "I0";
-                somethingChecked = true;
-            }
-
-    
-
-            
-
-
-            if (somethingChecked == false)
-            {
-                formatCode = formatCode + "0";
-            }
-
-            return formatCode;
         }
 
 
@@ -355,21 +456,7 @@ namespace DigiLabelFormats
             ChangeFormatCode(sender, e);
         }
 
-        private void TempQuantity(object sender, EventArgs e)
-        {
-            if (sender.Equals(radioGeenTemp))
-            {
-                chkMinMax.Checked = false;
-                grpTempQuantity.Enabled = false;
 
-            }
-            else
-            {
-                grpTempQuantity.Enabled = true;
-            }
-           
-            CheckRadioButton(sender, e);
-        }
 
 
         private void CheckRadioButton(object sender, EventArgs e)
@@ -399,20 +486,20 @@ namespace DigiLabelFormats
                     cmbTargetFormat.Enabled = true;
                     refreshDoelFormaten();
                     cmbTargetFormat.SelectedIndex = 0;
-                break;
+                    break;
                 case 2:
-                     sm5500LabelTexts = true;
-                     cmbTargetFormat.Text = assignInfotagNr();
-                     cmbTargetFormat.Enabled = false;
-                    
-                break;
+                    sm5500LabelTexts = true;
+                    cmbTargetFormat.Text = assignInfotagNr();
+                    cmbTargetFormat.Enabled = false;
+
+                    break;
             }
-           
+
             btnOK.Enabled = true;
             txtLabelFormatCode.Text = GenerateFormat();
-           GenerateImages();
-           AdjustButtons();
-           ErrorMessage();
+            GenerateImages();
+            AdjustButtons();
+            ErrorMessage();
         }
 
         private string assignInfotagNr()
@@ -476,7 +563,7 @@ namespace DigiLabelFormats
                     break;
             }
             return infotagnr;
-        
+
         }
 
 
@@ -503,7 +590,7 @@ namespace DigiLabelFormats
             {
                 string part = labelformatCode.Substring(8, labelformatCode.Length - 8);
                 int split = part.IndexOf("_");
-                
+
                 //codedevice = FormaatCode.IndexOf("_");
                 //codesize = 7;
                 //codesizestart = 8;
@@ -522,73 +609,148 @@ namespace DigiLabelFormats
 
 
 
-            chkBarcode.Checked = labelformatCode.Substring(13).Contains("Bc");
-            chkInpakDatum.Checked = labelformatCode.Substring(13).Contains("Pd");
-            chkTGT.Checked = labelformatCode.Substring(13).Contains("Ud");
-            chkBewaarAdvies.Checked = labelformatCode.Substring(13).Contains("Sm");
-            chkUVD.Checked = labelformatCode.Substring(13).Contains("Sd");
-            chkOperator.Checked = labelformatCode.Substring(13).Contains("Op");
-            this.chkPluNumber.Checked = labelformatCode.Substring(13).Contains("Pn");
-            this.chkShopLogo.Checked = labelformatCode.Substring(13).Contains("Sl");
-            this.chkShopLarge.Checked = labelformatCode.Substring(13).Contains("Ll");
-
-            radioTrace.Checked = labelformatCode.Substring(13).Contains("Tr");
-
-
-            radioKip.Checked = labelformatCode.Substring(13).Contains("Cw");
-
-            if (labelformatCode.Substring(13).Contains("Tr") == false & labelformatCode.Substring(13).Contains("Cw") == false)
+            for (int i = 0; i < lstExtendedFields.Items.Count; i++)
             {
-                radioGeenVlees.Checked = true;
+                clsLabelField LF = (clsLabelField)lstExtendedFields.Items[i];
+                lstExtendedFields.SetSelected(LF.ID, labelformatCode.Substring(13).Contains(LF.Code));
+            }
+
+            labelformatCode = labelformatCode.Replace("Tr", "T1T2T3T4T6");
+
+            for (int i = 0; i < this.lstTraceability.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstTraceability.Items[i];
+                lstTraceability.SetSelected(LF.ID, labelformatCode.Substring(13).Contains(LF.Code));
             }
 
 
-            radioTempVast.Checked = labelformatCode.Substring(13).Contains("Tf");
+            lstTemperatures.ClearSelected();
 
-
-            radioTempVar.Checked = labelformatCode.Substring(13).Contains("Tv");
-
-            if (labelformatCode.Substring(13).Contains("Tf") == false & labelformatCode.Substring(13).Contains("Tv") == false)
+            for (int i = 0; i < this.lstTemperatures.Items.Count; i++)
             {
-                radioGeenTemp.Checked = true;
+                clsLabelField LF = (clsLabelField)lstTemperatures.Items[i];
+                if (labelformatCode.Substring(13).Contains(LF.Code))
+                {
+                    lstTemperatures.SetSelected(i, true);
+                }
+
             }
 
-            chkMinMax.Checked = labelformatCode.Substring(13).Contains("Tt");
 
 
-            this.chkHeating.Checked = labelformatCode.Substring(13).Contains("Ht");
+            for (int i = 0; i < this.lstTextFields.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstTextFields.Items[i];
+                lstTextFields.SetSelected(LF.ID, labelformatCode.Substring(13).Contains(LF.Code));
+            }
 
-           
+            for (int i = 0; i < this.lstShoplogos.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstShoplogos.Items[i];
+                lstShoplogos.SetSelected(LF.ID, labelformatCode.Substring(13).Contains(LF.Code));
+            }
 
-            this.chkBeef.Checked = labelformatCode.Substring(13).Contains("Bi");
+            for (int i = 0; i < this.lstInfotag.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstInfotag.Items[i];
+                lstInfotag.SetSelected(LF.ID, labelformatCode.Substring(13).Contains(LF.Code));
+            }
 
-            
+            for (int i = 0; i < lstBasicFields.Items.Count; i++)
+            {
+                clsLabelField LF = (clsLabelField)lstBasicFields.Items[i];
+                lstBasicFields.SetSelected(LF.ID, !labelformatCode.Substring(13).Contains(LF.Code));
+            }
 
-            this.chkNuts.Checked = labelformatCode.Substring(13).Contains("Ni");
+            //  labelformatCode = labelformatCode.Replace("T1T2T3T4T6","Tr");
 
-            this.chkCooling.Checked = labelformatCode.Substring(13).Contains("Ci");
 
-            this.chkFreezing.Checked = labelformatCode.Substring(13).Contains("Cf");
+            //chkBarcode.Checked = labelformatCode.Substring(13).Contains("Bc");
+            //chkInpakDatum.Checked = labelformatCode.Substring(13).Contains("Pd");
+            //chkTGT.Checked = labelformatCode.Substring(13).Contains("Ud");
+            //chkBewaarAdvies.Checked = labelformatCode.Substring(13).Contains("Sm");
+            //chkUVD.Checked = labelformatCode.Substring(13).Contains("Sd");
+            //chkOperator.Checked = labelformatCode.Substring(13).Contains("Op");
+            //this.chkPluNumber.Checked = labelformatCode.Substring(13).Contains("Pn");
+            //this.chkShopLogo.Checked = labelformatCode.Substring(13).Contains("Sl");
+            //this.chkShopLarge.Checked = labelformatCode.Substring(13).Contains("Ll");
 
-            this.chkPromo.Checked = labelformatCode.Substring(13).Contains("Pr");
+            //radioTrace.Checked = labelformatCode.Substring(13).Contains("Tr");
 
-            this.chkInfoTagVanaf.Checked = labelformatCode.Substring(13).Contains("Iv");
 
-            this.chkArticleName.Checked = !labelformatCode.Substring(13).Contains("A0");
+            //radioKip.Checked = labelformatCode.Substring(13).Contains("Cw");
 
-            this.chkWeight.Checked = !labelformatCode.Substring(13).Contains("W0");
+            //if (labelformatCode.Substring(13).Contains("Tr") == false & labelformatCode.Substring(13).Contains("Cw") == false)
+            //{
+            //    radioGeenVlees.Checked = true;
+            //}
 
-            this.chkQuantity.Checked = !labelformatCode.Substring(13).Contains("Q0");
 
-            this.chkUnitPrice.Checked = !labelformatCode.Substring(13).Contains("U0");
+            //radioTempVast.Checked = labelformatCode.Substring(13).Contains("Tf");
 
-            this.chkTotalPrice.Checked = !labelformatCode.Substring(13).Contains("T0");
 
-            this.chkShopName.Checked = !labelformatCode.Substring(13).Contains("S0");
+            //radioTempVar.Checked = labelformatCode.Substring(13).Contains("Tv");
 
-            this.chkIngredients.Checked = !labelformatCode.Substring(13).Contains("I0");
+            //if (labelformatCode.Substring(13).Contains("Tf") == false & labelformatCode.Substring(13).Contains("Tv") == false)
+            //{
+            //    radioGeenTemp.Checked = true;
+            //}
 
-           
+            //chkMinMax.Checked = labelformatCode.Substring(13).Contains("Tt");
+
+
+            //this.chkHeating.Checked = labelformatCode.Substring(13).Contains("Ht");
+
+
+
+            //this.chkBeef.Checked = labelformatCode.Substring(13).Contains("Bi");
+
+
+
+            //this.chkNuts.Checked = labelformatCode.Substring(13).Contains("Ni");
+
+            //this.chkCooling.Checked = labelformatCode.Substring(13).Contains("Ci");
+
+            //this.chkFreezing.Checked = labelformatCode.Substring(13).Contains("Cf");
+
+            //this.chkPromo.Checked = labelformatCode.Substring(13).Contains("Pr");
+
+            //this.chkInfoTagVanaf.Checked = labelformatCode.Substring(13).Contains("Iv");
+
+            //this.chkArticleName.Checked = !labelformatCode.Substring(13).Contains("A0");
+
+            //  XElement xelement = XElement.Load(Directory.GetCurrentDirectory() + @"XML\basicfields.xml");
+            // IEnumerable<XElement> basicFields = xelement.Elements();
+
+            /////  List<string> basicFieldNames = new List<string>();
+
+            //   foreach (XElement xEle in basicFields)
+            //      this.lstBasicFields.SetSelected(Int16.Parse(xEle.Element("Index").ToString()),!labelformatCode.Substring(13).Contains(xEle.Element("Code").ToString())) ;
+
+
+            //foreach(var item in )
+
+            //basicFieldNames.Add(xEle.Element("name").ToString());
+
+            //lstBasicFields.DataSource = basicFields;
+
+
+
+
+
+            //this.chkWeight.Checked = !labelformatCode.Substring(13).Contains("W0");
+
+            //this.chkQuantity.Checked = !labelformatCode.Substring(13).Contains("Q0");
+
+            //this.chkUnitPrice.Checked = !labelformatCode.Substring(13).Contains("U0");
+
+            //this.chkTotalPrice.Checked = !labelformatCode.Substring(13).Contains("T0");
+
+            //this.chkShopName.Checked = !labelformatCode.Substring(13).Contains("S0");
+
+            //this.chkIngredients.Checked = !labelformatCode.Substring(13).Contains("I0");
+
+
 
         }
 
@@ -606,7 +768,7 @@ namespace DigiLabelFormats
         }
         private void ErrorMessage()
         {
-            if (NewFormat.Error!=null)
+            if (NewFormat.Error != null)
             {
                 lblError.Text = NewFormat.Error;
             }
@@ -616,7 +778,7 @@ namespace DigiLabelFormats
             }
 
         }
-       
+
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -663,7 +825,12 @@ namespace DigiLabelFormats
 
         }
 
-       
+        private void lstTextFields_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
 

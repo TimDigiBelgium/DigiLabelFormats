@@ -640,7 +640,7 @@ namespace DigiLabelFormats
                         }
                         //MessageBox.Show(formaatCode);
                         string digiDriverText = line;
-                        var newLabelFormat = new LabelFormat(doelFormaat, formaatCode, digiDriverText);
+                        var newLabelFormat = new LabelFormat(doelFormaat, formaatCode, digiDriverText,true);
 
                         LabelFormats.Add(newLabelFormat);
                         DoelFormaten.Add(newLabelFormat.DoelFormaat);

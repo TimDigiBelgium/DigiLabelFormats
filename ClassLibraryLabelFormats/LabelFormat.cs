@@ -180,6 +180,15 @@ namespace ClassLibraryLabelFormats
             Omschrijving = omschrijving;
         }
 
+        public LabelFormat(string doelFormaat, string formaatCode, string digiDriverText, bool import)
+        {
+            DoelFormaat = doelFormaat;
+            FormaatCode = formaatCode;
+            DigiDriverText = digiDriverText;
+            //Omschrijving = omschrijving;
+        }
+
+
         public override string ToString()
         {
 

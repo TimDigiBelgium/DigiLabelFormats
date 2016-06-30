@@ -539,6 +539,12 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_PdSmOpSlTfTt\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_SmUdFwT6TfTtW0Q0U0\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_SmUdFwT6TfTtW0Q0U0\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_UdSlTv\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2829,6 +2835,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Infotag\4.41 inch normal\Infotag_4.41 inch normal_PnLlTrW0Q0T0S0I0\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_SmUdFwT6TfTtW0Q0U0\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="LblFrmts\Database\Sm5500\60x60\Sm5500_60x60_PdSmOpTvTtCw\freeformats.dat" />

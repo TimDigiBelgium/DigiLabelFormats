@@ -15,32 +15,37 @@ namespace frmGenerateCombinations
         public frmMain()
         {
             InitializeComponent();
-            MessageBox.Show(GenerateFormat());
+            txtCombinations.Text=GenerateFormat();
         }
 
-        public bool random()
-        {
-            Random rand = new Random();
-            return rand.Next(0,2)==0;
-        }
+      
 
         public string GenerateFormat()
         {
             string FormatCode;
             FormatCode = "";
 
-            bool rnd = random();
-            if (rnd)
+
+            Utility truefalse = new Utility();
+            bool newbool = truefalse.GetRandomBoolean();
+            
+
+            if (newbool)
             {
                 FormatCode = "Bc";
             }
-            rnd = random();
-            if (rnd)
+
+            truefalse = new Utility();
+            newbool = truefalse.GetRandomBoolean();
+
+            if (newbool)
             {
                 FormatCode = FormatCode + "Pd";
             }
-            rnd = random();
-            if (rnd)
+
+            truefalse = new Utility();
+            newbool = truefalse.GetRandomBoolean();
+            if (newbool)
             {
                 FormatCode = FormatCode + "Sm";
             }
@@ -50,4 +55,24 @@ namespace frmGenerateCombinations
                 
         }
     }
+   
+    public class Utility
+    {
+        /// <summary>
+        /// Returns a random Boolean value.
+        /// </summary>
+        /// 
+        public bool GenerateBool { get; set; }
+
+        public Utility()
+        {
+            this.GenerateBool = GetRandomBoolean();
+        }
+
+        public bool GetRandomBoolean()
+        {
+            return new Random().Next(100) % 2 == 0;
+        }
+    }
 }
+

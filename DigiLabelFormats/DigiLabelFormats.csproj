@@ -389,6 +389,9 @@
     <Content Include="LblFrmts\Database\Sm5500\40x46\Sm5500_40x46_BcPd\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x100\Sm5500_60x100_BcBi\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x100\Sm5500_60x100_BcPdSmUdSl\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -429,6 +432,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x100\Sm5500_60x100_UdTv\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x120\Sm5500_60x120_BcBi\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x120\Sm5500_60x120_BcPdSmUdSl\kg.png">
@@ -560,6 +566,9 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_UdTvU0T0\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x60\Sm5500_60x60_BcBi\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x60\Sm5500_60x60_BcPdSmUdSl\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -638,6 +647,9 @@
     <Content Include="LblFrmts\Database\Sm5500\60x62\Sm5500_60x62_A0W0Q0U0T0\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x62\Sm5500_60x62_BcBi\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x62\Sm5500_60x62_BcPdSmUdSl\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -710,6 +722,9 @@
     <Content Include="LblFrmts\Database\Sm5500\60x62\Sm5500_60x62_UdTv\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcBi\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcPdSmUdSl\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -720,6 +735,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcPdUdTvTt\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcUdTf\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcUdTv\kg.png">
@@ -776,6 +794,9 @@
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_UdTv\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcBi\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcPdSmUdSl\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -786,6 +807,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcPdUdTvTt\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcUdTf\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcUdTv\kg.png">
@@ -836,6 +860,9 @@
     <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_UdTv\stk.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x80\Sm5500_60x80_BcBi\kg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x80\Sm5500_60x80_BcPdSmUdSl\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -882,6 +909,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x90\Sm5500_60x90_A0W0Q0U0T0\stk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x90\Sm5500_60x90_BcBi\kg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x90\Sm5500_60x90_BcPdSmUdSl\kg.png">
@@ -2840,6 +2870,15 @@
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_SmUdFwT6TfTtW0Q0U0\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x60\Sm5500_60x60_BcBi\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x100\Sm5500_60x100_BcBi\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x120\Sm5500_60x120_BcBi\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="LblFrmts\Database\Sm5500\60x60\Sm5500_60x60_PdSmOpTvTtCw\freeformats.dat" />
     <Content Include="LblFrmts\Database\Sm5500\60x62\Sm5500_60x62_PdSmOpTvTtCw\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -2926,6 +2965,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_UdPn\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcUdTf\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcUdTf\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x62\Sm5500_60x62_BcBi\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x70\Sm5500_60x70_BcBi\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_BcBi\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="LblFrmts\Database\Sm5500\60x73\Sm5500_60x73_PdSmOpSlU0T0\freeformats.dat">
@@ -3076,6 +3130,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\Linerless\Sm5500_Linerless_PdSmUdLlTrTfTt\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x80\Sm5500_60x80_BcBi\freeformats.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LblFrmts\Database\Sm5500\60x90\Sm5500_60x90_BcBi\freeformats.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="LblFrmts\InfoTags\Standaard File\RECEIVE.DAT" />

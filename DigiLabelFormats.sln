@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateCombinations", "frm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigidriverSend", "DigidriverSend\DigidriverSend.csproj", "{9B5E148F-DDA5-4271-961C-1E06345AD79A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateFormats", "GenerateFormats\GenerateFormats.csproj", "{F03714B8-D89F-440D-9D33-5D0EB062424C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B5E148F-DDA5-4271-961C-1E06345AD79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03714B8-D89F-440D-9D33-5D0EB062424C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03714B8-D89F-440D-9D33-5D0EB062424C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03714B8-D89F-440D-9D33-5D0EB062424C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03714B8-D89F-440D-9D33-5D0EB062424C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

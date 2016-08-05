@@ -55,6 +55,7 @@ namespace GenerateFormats
 
 
         var labelFieldsArray = textArray[7].Split('~');
+        labelFieldsArray[0] = labelFieldsArray[0].Replace("BA", "");
 
         var targetShopName = "0340";
         var targetArticleName = "0001";
@@ -81,6 +82,7 @@ namespace GenerateFormats
 
         //change y axis of articlename
         // restOfArray = string.Join(" ", array.Skip(1));
+        labelFieldsArray[0] = "BA" + labelFieldsArray[0];
 
         textArray[7] = string.Join("~", labelFieldsArray);
 

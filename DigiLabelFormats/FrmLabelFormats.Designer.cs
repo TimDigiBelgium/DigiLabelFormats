@@ -336,7 +336,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLabelFormats";
-            this.Text = "DigiLabelFormats by Tim Quirynen - version 30-06-2016";
+            this.Text = "DigiLabelFormats by Tim Quirynen - version 05-08-2016 - 647 labelformats";
             this.Load += new System.EventHandler(this.frmLabelFormats_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

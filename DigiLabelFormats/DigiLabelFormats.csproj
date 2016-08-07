@@ -3767,10 +3767,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x120\Sm5500_60x120_BcPd\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x120\Sm5500_60x120_BcPd\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x120\Sm5500_60x120_BcUdTvTt\kg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -3851,10 +3851,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcBi\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcBi\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcCwBi\error.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -3890,40 +3890,40 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcCwI0\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcCwI0\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcHtBi\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcHtBi\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcHt\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcHt\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdBi\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdBi\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdCwI0\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdCwI0\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdHt\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdHt\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPdSd\kg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -4082,10 +4082,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPd\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcPd\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_BcSdBi\kg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -4565,10 +4565,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_Bc\kg.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_Bc\stk.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="LblFrmts\Database\Sm5500\60x49\Sm5500_60x49_Bi\kg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

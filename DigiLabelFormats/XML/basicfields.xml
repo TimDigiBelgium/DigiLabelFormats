@@ -1,53 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-    <fields>
-      <field>
-        <name>Article name</name>
-        <code>A0</code>
-        <defaultselected>true</defaultselected>
-        <index>0</index>
-      </field>
-      <field>
-        <name>Weight</name>
-        <code>W0</code>
-        <defaultselected>true</defaultselected>
-        <index>1</index>
-      </field>
-      <field>
-        <name>Quantity</name>
-        <code>Q0</code>
-        <defaultselected>true</defaultselected>
-        <index>2</index>
-      </field>
-      <field>
-        <name>Unit Price</name>
-        <code>U0</code>
-        <defaultselected>true</defaultselected>
-        <index>3</index>
-      </field>
-      <field>
-        <name>Total Price</name>
-        <code>T0</code>
-        <defaultselected>true</defaultselected>
-        <index>4</index>
-      </field>
-      <field>
-        <name>Shop name</name>
-        <code>S0</code>
-        <defaultselected>true</defaultselected>
-        <index>5</index>
-      </field>
-      <field>
-        <name>Ingredients</name>
-        <code>I0</code>
-        <defaultselected>true</defaultselected>
-        <index>6</index>
-      </field>
-    </fields>
-   
- 
-   
-     
-  
-  
-     
+<fields>
+  <field>
+    <name>Article name</name>
+    <code>A0</code>
+    <defaultselected>true</defaultselected>
+    <index>0</index>
+  </field>
+  <field>
+    <name>Weight</name>
+    <code>W0</code>
+    <defaultselected>true</defaultselected>
+    <index>1</index>
+  </field>
+  <field>
+    <name>Quantity</name>
+    <code>Q0</code>
+    <defaultselected>true</defaultselected>
+    <index>2</index>
+  </field>
+  <field>
+    <name>Unit Price</name>
+    <code>U0</code>
+    <defaultselected>true</defaultselected>
+    <index>3</index>
+  </field>
+  <field>
+    <name>Total Price</name>
+    <code>T0</code>
+    <defaultselected>true</defaultselected>
+    <index>4</index>
+  </field>
+  <field>
+    <name>Shop name</name>
+    <code>S0</code>
+    <defaultselected>true</defaultselected>
+    <index>5</index>
+  </field>
+  <field>
+    <name>Ingredients</name>
+    <code>I0</code>
+    <defaultselected>true</defaultselected>
+    <index>6</index>
+  </field>
+</fields>
+
+
+
+
+
+
